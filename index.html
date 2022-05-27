@@ -1,16 +1,37 @@
+
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+	<head></head>
+	<body>
+		<div class="flex-container" id="mainDiv">
+			<h1 id="title">Simple Interest Calculator</h1>
+            <div class="flex-container" id="inputStuff">
+				<div class="flex-container" id="amount">
+					<label for="principal">Amount</label>
+					<input type="number" id="principal"><br/>
+				</div>
+				<div class="flex-container" id="interest">
+					<label for="mySlider">Interest Rate</label>
+					<input type="range" min="1.0" max="20.0" value="10.0" id="mySlider" step="0.1">
+					<span id="sliderValue"></span>
+				</div>
+				<div class="flex-container" id="numYears">
+					<label for="years">No. of Years</label>
+					<input type="number" id="years"><br/>
+				</div>
+			</div>
+			
+			</p>
+			<button onclick="compute()">Compute Interest</button>
+			</p>
+			<div id="display">
+				<p class="result" id="deposit">If you deposit</p>
+				<p class="result" id="atInterest">At an interest rate of</p>
+				<p class="result" id="willReceive">You will receive an amount of</p>
+				<p class="result" id="inTheYear">In the year</p>
+			</div>
+			<p>&copy; Everyone Can Get Rich</p>
+		</div>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</body>
 </html>
